@@ -16,15 +16,14 @@ class HiraganaCard extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(15),
           child: Column(
-
             children: <Widget>[
               Text(
                 _hiragana,
-                style: TextStyle(fontSize: 110),
+                textScaleFactor: 6,
               ),
               Text(
                 _trad,
-                style: TextStyle(fontSize: 25),
+                textScaleFactor: 1.5,
               )
             ],
           ),

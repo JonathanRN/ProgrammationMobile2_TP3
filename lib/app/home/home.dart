@@ -21,8 +21,8 @@ class Home extends StatelessWidget {
         children: List.generate(Hiraganas.length, (index) {
           return Center(
             child: HiraganaCard(
-              hiragana:'${_keys[index]}',
-              trad:'${_values[index]}',
+              hiragana: '${_keys[index]}',
+              trad: '${_values[index]}',
             ),
           );
         }),
