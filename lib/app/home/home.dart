@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tp3/util/strings.dart';
+import 'package:tp3/app/hiragana/hiragana_card.dart';
 
 class Home extends StatelessWidget {
   @override
