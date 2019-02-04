@@ -16,9 +16,7 @@ class HiraganaCard extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(15),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.end,
+
             children: <Widget>[
               Text(
                 _hiragana,
