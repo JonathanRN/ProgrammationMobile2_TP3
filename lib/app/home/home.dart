@@ -18,27 +18,28 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     var strings = Strings.of(context);
     return Scaffold(
-        body: IndexedStack(
-          children: routes,
-          index: _currentRouteIndex,
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _currentRouteIndex,
-          onTap: (index) {
-            setState(() {
-              _currentRouteIndex = index;
-            });
-          },
-          items: [
-            new BottomNavigationBarItem(
-              icon: new Icon(Icons.book),
-              title: new Text(strings.learn),
-            ),
-            new BottomNavigationBarItem(
-              icon: new Icon(Icons.create),
-              title: new Text(strings.train),
-            )
-          ],
-        ));
+      body: IndexedStack(
+        children: routes,
+        index: _currentRouteIndex,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentRouteIndex,
+        onTap: (index) {
+          setState(() {
+            _currentRouteIndex = index;
+          });
+        },
+        items: [
+          new BottomNavigationBarItem(
+            icon: new Icon(Icons.book),
+            title: new Text(strings.learn),
+          ),
+          new BottomNavigationBarItem(
+            icon: new Icon(Icons.create),
+            title: new Text(strings.train),
+          )
+        ],
+      ),
+    );
   }
 }

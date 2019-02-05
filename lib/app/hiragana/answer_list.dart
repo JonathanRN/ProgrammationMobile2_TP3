@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:tp3/app/hiragana/hiragana.dart';
 
 class AnswerList extends StatelessWidget {
-  List<String> _possibleAnswers;
+  Question _question;
 
-  AnswerList({value = ""}) : _possibleAnswers = value;
+  AnswerList({question}) : _question = question;
 
   @override
   Widget build(BuildContext context) {
@@ -12,21 +13,23 @@ class AnswerList extends StatelessWidget {
       children: <Widget>[
         FlatButton(
           child: Text(
-            _possibleAnswers.elementAt(0),
+            _question.possibleAnswers[0],
+            textScaleFactor: 2,
+          ),
+          onPressed: () {
+
+          },
+        ),
+        FlatButton(
+          child: Text(
+            _question.possibleAnswers[0],
             textScaleFactor: 2,
           ),
           onPressed: () {},
         ),
         FlatButton(
           child: Text(
-            _possibleAnswers.elementAt(1),
-            textScaleFactor: 2,
-          ),
-          onPressed: () {},
-        ),
-        FlatButton(
-          child: Text(
-            _possibleAnswers.elementAt(2),
+            _question.possibleAnswers[0],
             textScaleFactor: 2,
           ),
           onPressed: () {},

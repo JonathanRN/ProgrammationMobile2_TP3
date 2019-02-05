@@ -3,14 +3,7 @@ import 'package:tp3/util/strings.dart';
 import 'package:tp3/app/hiragana/hiragana.dart';
 import 'package:tp3/app/hiragana/hiragana_card.dart';
 
-class LearnRoute extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return _LearnRouteState();
-  }
-}
-
-class _LearnRouteState extends State<LearnRoute> {
+class LearnRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
