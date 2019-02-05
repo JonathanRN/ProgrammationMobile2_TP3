@@ -16,7 +16,7 @@ class QuestionCard extends StatelessWidget {
             child: Center(
               child: Text(
                 _hiraganaCharacter,
-                textScaleFactor: 4,
+                textScaleFactor: 12,
               ),
             )),
       ),
