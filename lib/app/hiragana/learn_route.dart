@@ -4,7 +4,6 @@ import 'package:tp3/app/hiragana/hiragana.dart';
 import 'package:tp3/app/hiragana/hiragana_card.dart';
 
 class LearnRoute extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     var strings = Strings.of(context);
@@ -20,8 +19,8 @@ class LearnRoute extends StatelessWidget {
         children: List.generate(Hiraganas.length, (index) {
           return Center(
             child: HiraganaCard(
-              hiragana: '${_keys[index]}',
-              trad: '${_values[index]}',
+              _keys[index],
+              _values[index],
             ),
           );
         }),

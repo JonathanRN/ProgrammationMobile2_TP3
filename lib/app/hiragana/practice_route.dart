@@ -20,7 +20,7 @@ class PracticeRoute extends StatelessWidget {
             value: question.hiragana,
           ),
           AnswerList(
-            question: question,
+            question,
           ),
         ],
       ),

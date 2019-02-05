@@ -71,7 +71,7 @@ class Question {
 
     var keys = Hiraganas.keys.toList()..shuffle();
     hiragana = keys[0];
-    possibleAnswers.add(Hiraganas[hiragana]);
+    possibleAnswers.add(getAnswer());
 
     var values = Hiraganas.values.toList()..shuffle();
     for (var i = 0; i < AMOUNT_OF_POSSIBLE_ANSWERS - 1; i++) {
@@ -79,5 +79,9 @@ class Question {
     }
 
     possibleAnswers.shuffle();
+  }
+
+  String getAnswer() {
+    return Hiraganas[hiragana];
   }
 }

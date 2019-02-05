@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
 
-class HiraganaCard extends StatelessWidget {
+class HiraganaCard extends StatefulWidget {
   final _hiragana;
   final _trad;
 
-  HiraganaCard({hiragana = "", trad = ""})
+  HiraganaCard(hiragana, trad )
+      : _hiragana = hiragana,
+        _trad = trad;
+
+  @override
+  State<StatefulWidget> createState() {
+    return _HiraganaCardState(_hiragana, _trad);
+  }
+}
+
+class _HiraganaCardState extends State<HiraganaCard> {
+  final _hiragana;
+  final _trad;
+
+  _HiraganaCardState(hiragana, trad)
       : _hiragana = hiragana,
         _trad = trad;
 
