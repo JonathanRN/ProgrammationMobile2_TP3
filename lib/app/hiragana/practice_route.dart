@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tp3/app/hiragana/question_card.dart';
+import 'package:tp3/app/hiragana/answer_list.dart';
 
 class PracticeRoute extends StatefulWidget {
   @override
@@ -8,19 +10,21 @@ class PracticeRoute extends StatefulWidget {
 }
 
 class _PracticeRouteState extends State<PracticeRoute> {
+  List<String> _possibleAnswers = ["tri","ste","rie"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Second Route"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            // Navigate back to first route when tapped.
-          },
-          child: Text('Go back!'),
-        ),
+      body: Column(
+        children: <Widget>[
+          QuestionCard(
+            value: "5",
+          ),
+          AnswerList(value: _possibleAnswers,)
+        ],
       ),
     );
   }
