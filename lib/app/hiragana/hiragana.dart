@@ -56,3 +56,19 @@ const Hiraganas = {
   'わ': 'wa',
   'を': 'wo',
 };
+
+class Question {
+  String question;
+  List<String> answers;
+
+  Question({question, answers})
+      : this.question = question, this.answers = answers;
+}
+
+class Hiragana {
+
+
+  Question getRandomQuestion() {
+    
+  }
+}
