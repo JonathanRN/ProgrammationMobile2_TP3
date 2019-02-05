@@ -7,31 +7,40 @@ class AnswerList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        FlatButton(
-          child: Text(
-            _possibleAnswers.elementAt(0),
-            textScaleFactor: 2,
+    return Expanded(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Expanded(
+            child: FlatButton(
+              child: Text(
+                _possibleAnswers.elementAt(0),
+                textScaleFactor: 2,
+              ),
+              onPressed: () {},
+            ),
           ),
-          onPressed: () {},
-        ),
-        FlatButton(
-          child: Text(
-            _possibleAnswers.elementAt(1),
-            textScaleFactor: 2,
+          Expanded(
+            child: FlatButton(
+              child: Text(
+                _possibleAnswers.elementAt(1),
+                textScaleFactor: 2,
+              ),
+              onPressed: () {},
+            ),
           ),
-          onPressed: () {},
-        ),
-        FlatButton(
-          child: Text(
-            _possibleAnswers.elementAt(2),
-            textScaleFactor: 2,
+          Expanded(
+            child: FlatButton(
+              child: Text(
+                _possibleAnswers.elementAt(2),
+                textScaleFactor: 2,
+              ),
+              onPressed: () {},
+            ),
           ),
-          onPressed: () {},
-        )
-      ],
+        ],
+      ),
     );
   }
 }
