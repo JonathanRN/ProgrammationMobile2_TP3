@@ -56,19 +56,28 @@ const Hiraganas = {
   'わ': 'wa',
   'を': 'wo',
 };
+const AMOUNT_OF_POSSIBLE_ANSWERS = 3;
 
 class Question {
-  String question;
-  List<String> answers;
+  String hiragana;
+  List<String> possibleAnswers = List<String>();
 
-  Question({question, answers})
-      : this.question = question, this.answers = answers;
-}
+  Question() {
+    createRandomQuestion();
+  }
 
-class Hiragana {
+  void createRandomQuestion() {
+    possibleAnswers.clear();
 
+    var keys = Hiraganas.keys.toList()..shuffle();
+    hiragana = keys[0];
+    possibleAnswers.add(Hiraganas[hiragana]);
 
-  Question getRandomQuestion() {
-    
+    var values = Hiraganas.values.toList()..shuffle();
+    for (var i = 0; i < AMOUNT_OF_POSSIBLE_ANSWERS - 1; i++) {
+      possibleAnswers.add(values[i]);
+    }
+
+    possibleAnswers.shuffle();
   }
 }

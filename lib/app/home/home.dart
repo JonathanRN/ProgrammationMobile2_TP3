@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tp3/util/strings.dart';
 import 'package:tp3/app/hiragana/learn_route.dart';
 import 'package:tp3/app/hiragana/practice_route.dart';
 
@@ -9,38 +10,35 @@ class Home extends StatefulWidget {
   }
 }
 
-class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin {
+class _HomeState extends State<Home> {
   int _currentRouteIndex = 0;
-  var routes = [
-    new LearnRoute(),
-    new PracticeRoute()
-  ];
+  var routes = [LearnRoute(), PracticeRoute()];
 
   @override
   Widget build(BuildContext context) {
+    var strings = Strings.of(context);
     return Scaffold(
-      body: routes[_currentRouteIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentRouteIndex,
-        onTap: (index) {
-          setState(() {
-            _currentRouteIndex = index;
-          });
-        },
-        items: [
-          new BottomNavigationBarItem(
-            icon: new Icon(Icons.book),
-            title: new Text('Apprendre'),
-          ),
-          new BottomNavigationBarItem(
-            icon: new Icon(Icons.create),
-            title: new Text('Entraînement'),
-          )
-        ],
-      )
-    );
+        body: IndexedStack(
+          children: routes,
+          index: _currentRouteIndex,
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentRouteIndex,
+          onTap: (index) {
+            setState(() {
+              _currentRouteIndex = index;
+            });
+          },
+          items: [
+            new BottomNavigationBarItem(
+              icon: new Icon(Icons.book),
+              title: new Text(strings.learn),
+            ),
+            new BottomNavigationBarItem(
+              icon: new Icon(Icons.create),
+              title: new Text(strings.train),
+            )
+          ],
+        ));
   }
-  // Setting to true will force the tab to never be disposed. This could be dangerous.
-  @override
-  bool get wantKeepAlive => true;
 }

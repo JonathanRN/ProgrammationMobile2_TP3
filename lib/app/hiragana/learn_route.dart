@@ -10,7 +10,7 @@ class LearnRoute extends StatefulWidget {
   }
 }
 
-class _LearnRouteState extends State<LearnRoute> with AutomaticKeepAliveClientMixin {
+class _LearnRouteState extends State<LearnRoute> {
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +35,4 @@ class _LearnRouteState extends State<LearnRoute> with AutomaticKeepAliveClientMi
       ),
     );
   }
-
-  // Setting to true will force the tab to never be disposed. This could be dangerous.
-  @override
-  bool get wantKeepAlive => true;
 }

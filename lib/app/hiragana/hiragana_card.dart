@@ -19,7 +19,7 @@ class HiraganaCard extends StatelessWidget {
             children: <Widget>[
               Text(
                 _hiragana,
-                textScaleFactor: 9,
+                textScaleFactor: 6.5,
               ),
               Text(
                 _trad,
