@@ -1,3 +1,5 @@
+import 'package:tp3/app/routes/practice_route.dart';
+
 const Hiraganas = {
   /* - */
   'ん': 'n',
@@ -61,8 +63,10 @@ const AMOUNT_OF_POSSIBLE_ANSWERS = 3;
 class Question {
   String hiragana;
   List<String> possibleAnswers = List<String>();
+  PracticeRouteState practiceRoute;
 
-  Question() {
+  Question(practiceRoute) {
+    this.practiceRoute = practiceRoute;
     createRandomQuestion();
   }
 
@@ -79,6 +83,8 @@ class Question {
     }
 
     possibleAnswers.shuffle();
+
+    practiceRoute.refresh();
   }
 
   String getAnswer() {

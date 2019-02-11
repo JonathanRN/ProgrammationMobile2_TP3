@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tp3/app/hiragana/hiragana.dart';
+import 'package:tp3/app/hiragana/question.dart';
 
 class AnswerButton extends StatefulWidget {
   var _possibleAnswer;

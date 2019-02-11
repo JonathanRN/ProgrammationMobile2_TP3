@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tp3/util/strings.dart';
-import 'package:tp3/app/hiragana/learn_route.dart';
-import 'package:tp3/app/hiragana/practice_route.dart';
+import 'package:tp3/app/routes/learn_route.dart';
+import 'package:tp3/app/routes/practice_route.dart';
 
 class Home extends StatefulWidget {
   @override
