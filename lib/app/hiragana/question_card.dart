@@ -3,23 +3,22 @@ import 'package:flutter/material.dart';
 class QuestionCard extends StatelessWidget {
   final _hiraganaCharacter;
 
-  QuestionCard({value = ""})
-      : _hiraganaCharacter = value;
+  QuestionCard({value = ""}) : _hiraganaCharacter = value;
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.12,
-      child: Card(
-        child: Padding(
-            padding: EdgeInsets.all(15),
-            child: Center(
-              child: Text(
-                _hiraganaCharacter,
-                textScaleFactor: 12,
-              ),
-            )),
-      ),
+    final Orientation orientation = MediaQuery.of(context).orientation;
+    final bool isLandscape = orientation == Orientation.landscape;
+
+    return Expanded(
+        child: Card(
+          child: Center(
+            child: Text(
+              _hiraganaCharacter,
+              textScaleFactor: isLandscape ? 4 : 12,
+            ),
+          ),
+        ),
     );
   }
 }
