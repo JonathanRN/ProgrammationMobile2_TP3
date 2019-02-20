@@ -12,6 +12,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _currentRouteIndex = 0;
+  //BEN_CORRECTION : Routes devrait être private.
   var routes = [LearnRoute(), PracticeRoute()];
 
   @override
@@ -25,6 +26,7 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentRouteIndex,
         onTap: (index) {
+          //BEN_REVIEW : Éviter les lambdas lorsque possible.
           setState(() {
             _currentRouteIndex = index;
           });

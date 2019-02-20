@@ -61,8 +61,11 @@ const Hiraganas = {
 const AMOUNT_OF_POSSIBLE_ANSWERS = 3;
 
 class Question {
+  //BEN_CORRECTION : Private.
   String hiragana;
+  //BEN_CORRECTION : Private.
   List<String> possibleAnswers = List<String>();
+  //BEN_CORRECTION : Private.
   PracticeRouteState practiceRoute;
 
   Question(practiceRoute) {

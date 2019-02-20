@@ -7,6 +7,7 @@ class AnswerList extends StatelessWidget {
   List<AnswerButton> _answerButtons;
 
   AnswerList(question) : _question = question {
+    //BEN_CORRECTION : Devrait être initialisé avec une boucle.
     _answerButtons = [
       AnswerButton(0, _question),
       AnswerButton(1, _question),

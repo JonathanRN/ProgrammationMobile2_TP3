@@ -16,6 +16,8 @@ class PracticeRouteState extends State<PracticeRoute> {
     var strings = Strings.of(context);
     var question = Question(this);
 
+    //BEN_CORRECTION : L'application contient déjà un Scaffold. Il ne devrait pas
+    //                 y en avoir 2.
     return Scaffold(
       appBar: AppBar(
         title: Text(strings.title),
